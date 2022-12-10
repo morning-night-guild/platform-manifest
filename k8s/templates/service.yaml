@@ -11,4 +11,4 @@ spec:
     app: platform
   ports:
     - protocol: TCP
-      port: "{{ .Values.port }}"
+      port: 8080
