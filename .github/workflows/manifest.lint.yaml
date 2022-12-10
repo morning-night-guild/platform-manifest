@@ -1,8 +1,8 @@
-name: lint
+name: manifest lint
 on:
   pull_request:
     paths:
-      - .github/workflows/lint.yaml
+      - .github/workflows/manifest.lint.yaml
       - k8s/**/*.yaml
 jobs:
   lint:
