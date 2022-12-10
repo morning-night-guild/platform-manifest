@@ -39,4 +39,5 @@ encrypt:
 
 .PHONY: decrypt
 decrypt:
-	@sops --decrypt --in-place k8s/templates/${SECRET_FILE_NAME}
+	@if [ -z "${name}" ]; then echo "Please specify name"; exit 1; fi
+	@sops --decrypt --in-place k8s/templates/${name}
