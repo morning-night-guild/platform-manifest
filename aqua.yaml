@@ -1,0 +1,10 @@
+# aqua - Declarative CLI Version Manager
+# https://aquaproj.github.io/
+registries:
+  - type: standard
+    ref: v3.103.0 # renovate: depName=aquaproj/aqua-registry
+packages:
+  - name: FiloSottile/age@v1.0.0
+  - name: google/yamlfmt@v0.6.0
+  - name: mikefarah/yq@v4.30.5
+  - name: mozilla/sops@v3.7.3

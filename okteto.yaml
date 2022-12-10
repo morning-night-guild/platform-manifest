@@ -1,0 +1,3 @@
+deploy:
+  - sh script/sops.sh
+  - sh script/helm.sh
