@@ -17,6 +17,7 @@ spec:
       containers:
         - name: platform
           image: morningnightguild/platform:v20221224005132
+          imagePullPolicy: IfNotPresent
           env:
             - name: PORT
               value: "{{ .Values.port }}"
