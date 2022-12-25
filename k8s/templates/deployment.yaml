@@ -31,6 +31,16 @@ spec:
                 secretKeyRef:
                   name: platform-secret-api-key
                   key: API_KEY
+            - name: NEWRELIC_APP_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: platform-secret-newrelic-app-name
+                  key: NEWRELIC_APP_NAME
+            - name: NEWRELIC_LICENSE
+              valueFrom:
+                secretKeyRef:
+                  name: platform-secret-newrelic-license
+                  key: NEWRELIC_LICENSE
           resources:
             limits:
               cpu: 500m
