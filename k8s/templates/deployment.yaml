@@ -19,6 +19,8 @@ spec:
           image: morningnightguild/platform:v20221224060942
           imagePullPolicy: IfNotPresent
           env:
+            - name: ENV
+              value: "{{ .Values.env }}"
             - name: PORT
               value: "{{ .Values.port }}"
             - name: DATABASE_URL
