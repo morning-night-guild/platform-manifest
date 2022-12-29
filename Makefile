@@ -29,15 +29,15 @@ decode:
 .PHONY: encrypt
 encrypt:
 	@if [ -z "${name}" ]; then echo "Please specify name"; exit 1; fi
-	@yq -i "(del.sops)" k8s/templates/${name}
+	@yq -i "(del.sops)" k8s/templates/secret/${name}
 	@sops --encrypt \
 		--age ${AGE_PUBLIC_KEY} \
 		--encrypted-regex '^(data|stringData)$$' \
 		--in-place \
-		k8s/templates/${name}
-	@yamlfmt k8s/templates/${name}
+		k8s/templates/secret/${name}
+	@yamlfmt k8s/templates/secret/${name}
 
 .PHONY: decrypt
 decrypt:
 	@if [ -z "${name}" ]; then echo "Please specify name"; exit 1; fi
-	@sops --decrypt --in-place k8s/templates/${name}
+	@sops --decrypt --in-place k8s/templates/secret/${name}
