@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: platform
-          image: morningnightguild/platform:v20221229083901
+          image: morningnightguild/platform:v20221230165811
           imagePullPolicy: IfNotPresent
           env:
             - name: ENV
