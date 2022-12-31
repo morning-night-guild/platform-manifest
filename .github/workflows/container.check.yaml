@@ -3,7 +3,9 @@ on:
   pull_request:
     paths:
       - .github/workflows/container.check.yaml
+      - k8s/env/prod/values.yaml
       - k8s/templates/deployment.yaml
+      - k8s/values.yaml
 jobs:
   check:
     runs-on: ubuntu-latest
